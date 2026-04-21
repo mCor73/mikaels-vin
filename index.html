@@ -4661,7 +4661,7 @@
 'use strict';
 
 // ========== App version ==========
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.1.0';
 const APP_BUILD_DATE = '2026-04-21';
 
 // ========== Storage shim ==========
@@ -4848,7 +4848,309 @@ const TRIPS = [
       'Wines to bring home': 'A López de Heredia Gran Reserva (if you can source one), a single-vineyard Artadi or Contador for a "modern Rioja" benchmark, and an inexpensive Crianza or Reserva from a cooperative for everyday drinking.',
       'Glossary': 'Crianza (1 year oak, 1 year bottle), Reserva (3 yrs total, 1 in oak), Gran Reserva (5 yrs total, 2 in oak). "Generico" wines skip the oak-ageing classifications and often come from single vineyards.'
     }
+  }  ,
+  {
+    id: 'burgundy',
+    name: 'Burgundy',
+    subtitle: 'Three days through the Côte d\'Or — from Beaune to Chambolle',
+    duration: '3 days',
+    country: 'France',
+    region: 'Bourgogne',
+    intro: 'Burgundy rewards slow travel. The Côte d\'Or is a 50-kilometre strip of east-facing hillside divided into hundreds of micro-vineyards — climats — each with its own personality. This itinerary anchors you in Beaune, then walks the Côte de Beaune and Côte de Nuits to taste through Pinot Noir and Chardonnay at the source.',
+    practical: {
+      'Best time': 'May–June for green vineyards and long evenings, or September for golden harvest light. Avoid the late November Hospices de Beaune wine auction weekend unless you specifically want it (everything books out at triple price).',
+      'Getting there': 'TGV from Paris Gare de Lyon to Beaune, ~2h. Geneva and Lyon airports are also viable. A car is helpful for visiting individual domaines, but Beaune-based tasting is walkable.',
+      'Base': 'Beaune is the natural choice — central, lively, walkable, with restaurants and tasting cellars in the medieval ramparts.',
+      'Booking': 'Most top domaines (Mugnier, Roumier, Lafon, Leflaive) require introductions through importers and don\'t take walk-ins. The visits below are at producers who genuinely welcome enthusiast visitors — book 3–4 weeks ahead.'
+    },
+    days: [
+      {
+        day: 1,
+        title: 'Beaune & the Hospices',
+        subtitle: 'Orientation in the wine capital',
+        description: 'Get your bearings in Beaune. The Hôtel-Dieu (Hospices de Beaune) is a 15th-century almshouse with a famous polychrome roof — its ancient charity-funded vineyard holdings still produce wines auctioned every November. Spend the day walking the ramparts and tasting in the négociant cellars.',
+        stops: [
+          { time: 'Morning', place: 'Hôtel-Dieu / Hospices de Beaune', note: 'Audio-guided visit through the medieval hospital wards, kitchens, and pharmacy. The Polyptych of the Last Judgment by Rogier van der Weyden is in the back gallery.' },
+          { time: 'Late morning', place: 'Marché aux Vins', note: 'Self-paced tasting of 15+ Burgundy appellations in the candle-lit cellars beneath a Franciscan church. Excellent orientation to the regional hierarchy.' },
+          { time: 'Lunch', place: 'Ma Cuisine, Beaune', note: 'A wine-list legend — over 800 references at fair prices. Book ahead. Classic bistro food (œufs en meurette, bœuf bourguignon).' },
+          { time: 'Afternoon', place: 'Bouchard Père & Fils', note: 'Their cellar in the Château de Beaune (15th-century fortified château) is one of the most impressive in town. Tour and tasting flight covering Côte de Beaune and Côte de Nuits.' },
+          { time: 'Evening', place: 'Caves Madeleine for dinner', note: 'Modern Burgundian small plates, deeply curated wine list with a focus on small growers. Or for a splurge: Le Bénaton (one Michelin star).' }
+        ]
+      },
+      {
+        day: 2,
+        title: 'Côte de Beaune — whites & southern villages',
+        subtitle: 'Meursault, Puligny, Volnay',
+        description: 'Drive south from Beaune through some of the world\'s greatest white-wine villages. Meursault is rich and nutty; Puligny-Montrachet is mineral and ethereal; Chassagne sits between them. Volnay produces some of the most elegant red Burgundies.',
+        stops: [
+          { time: 'Morning', place: 'Domaine des Comtes Lafon (book ahead) or Château de Meursault', note: 'If you can\'t get into Lafon, the Château de Meursault offers excellent walk-in tours through its 14th-century cellars with a flight covering several climats.' },
+          { time: 'Late morning', place: 'Walk through Puligny-Montrachet', note: 'The village is tiny but the vineyard names are mythic — Le Montrachet, Bâtard-Montrachet, Chevalier-Montrachet, all visible from the village square. Stop at Olivier Leflaive Restaurant + Domain for tastings if you can\'t get into a private domaine.' },
+          { time: 'Lunch', place: 'Le Montrachet, Puligny-Montrachet', note: 'Refined village hotel restaurant with a serious cellar. Book ahead. The set lunch menu is excellent value for what\'s in the glass.' },
+          { time: 'Afternoon', place: 'Volnay village walk', note: 'Smaller, quieter — wander up the slope to see the Premier Cru vineyards (Caillerets, Champans, Taillepieds) right behind the houses.' },
+          { time: 'Late afternoon', place: 'Pommard — Domaine du Comte Armand or Château de Pommard', note: 'Pommard reds are darker, more powerful than Volnay. Château de Pommard does excellent guided tours with biodynamic vineyard explanations.' },
+          { time: 'Evening', place: 'Back in Beaune', note: 'Try Le Comptoir des Tontons for a more relaxed evening, or Loiseau des Vignes for refined Burgundian classics with by-the-glass options across many top producers.' }
+        ]
+      },
+      {
+        day: 3,
+        title: 'Côte de Nuits — the great reds',
+        subtitle: 'Nuits-Saint-Georges, Vosne, Chambolle, Gevrey',
+        description: 'North of Beaune lies the Côte de Nuits — Pinot Noir territory. The famous wall along the route is the actual stone boundary of vineyards like Romanée-Conti, Richebourg, La Tâche. You can\'t taste those, but you can absolutely see and smell them, and taste from the same villages.',
+        stops: [
+          { time: 'Morning', place: 'Drive Route des Grands Crus', note: 'The D974 from Beaune through Nuits-Saint-Georges, Vosne-Romanée, Vougeot, Chambolle, Morey, Gevrey is the great wine drive of the world. Stop at Vosne-Romanée — the cross marking Romanée-Conti is in the middle of the village vineyards.' },
+          { time: 'Mid-morning', place: 'Château du Clos de Vougeot', note: 'A grand 12th-century Cistercian monastery in the middle of the famous walled vineyard. Tour the medieval wine presses and the great hall.' },
+          { time: 'Late morning', place: 'Domaine Bertagna (Vougeot) or Domaine Drouhin-Laroze (Gevrey)', note: 'Two domaines that consistently welcome thoughtful enthusiast visits. Book ahead. Drouhin-Laroze has Grand Cru holdings in Bonnes Mares, Latricières-Chambertin, Chapelle-Chambertin.' },
+          { time: 'Lunch', place: 'Chez Guy, Gevrey-Chambertin', note: 'A village bistro in the heart of Gevrey with a wine list packed with growers from the surrounding crus. Try the jambon persillé and a Gevrey from a small producer.' },
+          { time: 'Afternoon', place: 'Walk through Chambolle-Musigny', note: 'The most graceful of the Côte de Nuits villages. Climb up to see Les Amoureuses and the Musigny Grand Cru vineyards. Tiny producer Domaine Frédéric Magnien has a tasting room nearby.' },
+          { time: 'Evening', place: 'Final dinner — La Roseraie de Vougeot or back in Beaune', note: 'For something special: Chez Simon (Flagey-Echezeaux) does superlative Burgundian classics with a handpicked wine list. Or end where you started — Beaune\'s old town.' }
+        ]
+      }
+    ],
+    extras: {
+      'If you have a 4th day': 'Drive to Chablis (1.5h north-west) for a completely different expression of Chardonnay — flinty, mineral, kimmeridgian limestone instead of Côte d\'Or marl. Domaine William Fèvre offers excellent tours.',
+      'Wines to bring home': 'A village-level Vosne-Romanée or Chambolle-Musigny from a smaller producer (Burgundy Grand Cru is rarely worth the travel-luggage tax). For whites, a Saint-Aubin Premier Cru — Burgundy\'s best value white. And a Côte de Beaune-Villages or Bourgogne Hautes-Côtes for everyday drinking.',
+      'Glossary': 'Bourgogne (regional), Village (e.g. Meursault), Premier Cru (specific named vineyard), Grand Cru (the very best — only ~2% of production). "Climat" is a uniquely Burgundian word for a precisely-defined plot. The Hospices de Beaune auctions wines under specific cuvée names (Cuvée Nicolas Rolin, etc.) named after historical donors.'
+    }
+  },
+  {
+    id: 'piedmont',
+    name: 'Piedmont',
+    subtitle: 'Three days in Barolo and Barbaresco',
+    duration: '3 days',
+    country: 'Italy',
+    region: 'Piemonte',
+    intro: 'Piedmont in autumn is one of wine travel\'s greatest experiences — Nebbiolo coming into harvest, white truffles in season, mist rising from the Tanaro river. This trip bases you in Alba and explores the two great red appellations on either side: Barolo to the south-west, Barbaresco to the north-east.',
+    practical: {
+      'Best time': 'Late September through November for harvest and white truffle season (Alba\'s truffle festival peaks early November). May–June for fewer crowds and walking weather. Avoid August — many producers close.',
+      'Getting there': 'Fly to Turin (1h drive to Alba) or Milan Malpensa (2h). A car is essential — vineyards are spread across rolling hills with limited public transport.',
+      'Base': 'Alba for a small medieval city base with excellent restaurants. Or stay in a vineyard agriturismo around La Morra, Barolo village, or Treiso for total immersion in the hills.',
+      'Booking': 'Most Barolo and Barbaresco producers require advance booking. The wineries below welcome serious visitors — email 2–3 weeks ahead. Long lunches are essential here; don\'t over-schedule.'
+    },
+    days: [
+      {
+        day: 1,
+        title: 'Barolo — the king of wines',
+        subtitle: 'La Morra, Barolo village, Castiglione Falletto',
+        description: 'Spend the day in the Barolo zone, which spans 11 communes. Start with the panoramic views from La Morra, then descend into Barolo village itself, and on to the great cru hills around Castiglione Falletto.',
+        stops: [
+          { time: 'Morning', place: 'Cantina Mascarello (Bartolo Mascarello), Barolo village', note: 'A pilgrimage for traditionalists — Maria-Teresa makes Barolo as her father did, single classic blend, no new oak, hand-labelled bottles. Book well ahead; visits are intimate and unforgettable.' },
+          { time: 'Late morning', place: 'Marchesi di Barolo', note: 'The historic estate that effectively created modern Barolo in the 19th century. Excellent guided tour through their old cellars in Barolo village.' },
+          { time: 'Lunch', place: 'Ristorante Locanda nel Borgo Antico, Barolo', note: 'Refined Piedmontese cuisine in a small village restaurant. The tasting menu pairs beautifully with Barolo. (One Michelin star.) Or for something simpler: La Cantinetta, also in Barolo.' },
+          { time: 'Afternoon', place: 'Castiglione Falletto and Monforte d\'Alba', note: 'Drive between the great cru hills — Monprivato, Villero, Bussia. The viewpoint from the Castiglione castle gives you the whole Barolo landscape in one panorama.' },
+          { time: 'Late afternoon', place: 'Vietti or Brovia, Castiglione Falletto', note: 'Vietti is the ambitious modern face — single-vineyard Barolos from many of the great crus. Brovia is more traditional, family-run, much smaller.' },
+          { time: 'Evening', place: 'Back to Alba — dinner at Osteria dell\'Arco', note: 'Classic Piedmontese — agnolotti del plin, vitello tonnato, brasato al Barolo. Excellent value, long wine list focused on local growers.' }
+        ]
+      },
+      {
+        day: 2,
+        title: 'Alba & Barbaresco',
+        subtitle: 'White truffles, Nebbiolo\'s elegant cousin',
+        description: 'Spend the morning in Alba — the Saturday market is one of Italy\'s great food markets — then cross the Tanaro river to Barbaresco. Where Barolo is grand and tannic, Barbaresco is more aromatic, slightly more accessible young.',
+        stops: [
+          { time: 'Morning', place: 'Alba — Mercato di Alba', note: 'Saturday and Wednesday mornings; the truffle hall and food stalls are extraordinary. Even outside truffle season the cheeses, salumi, and seasonal produce are worth a long browse.' },
+          { time: 'Late morning', place: 'Produttori del Barbaresco', note: 'A cooperative of 50+ small growers making serious single-cru Barbarescos at honest prices. Walk-in tasting room; great place to learn the cru hierarchy without booking ahead.' },
+          { time: 'Lunch', place: 'Antica Torre, Barbaresco village', note: 'Inside the medieval village, with views over the vineyards. Casual, excellent. Try tajarin pasta with sausage ragù.' },
+          { time: 'Afternoon', place: 'Gaja (book months ahead) or Cascina delle Rose', note: 'Gaja is the modernist legend; visits are notoriously hard to secure. Cascina delle Rose, run by the Marcarino family, makes elegant traditional Barbaresco from Rio Sordo and Tre Stelle and welcomes thoughtful visitors.' },
+          { time: 'Late afternoon', place: 'Walk to Tre Stelle', note: 'A short drive or walk takes you to the Tre Stelle hilltop with 360° views — Barbaresco village, Treiso, the Alps on a clear day.' },
+          { time: 'Evening', place: 'Dinner at La Ciau del Tornavento, Treiso', note: 'A Michelin-starred Piedmontese restaurant in a former school building with a vineyard-view terrace. Cellar of 60,000+ bottles. Book ahead.' }
+        ]
+      },
+      {
+        day: 3,
+        title: 'Roero & whites',
+        subtitle: 'Arneis, Moscato, and quieter hills',
+        description: 'Cross to the north side of the Tanaro into Roero — the same Nebbiolo grape but lighter and earlier-drinking, plus the white grape Arneis. End with a stop in the Moscato hills around Castiglione Tinella for the world\'s most charming sweet whites.',
+        stops: [
+          { time: 'Morning', place: 'Bruno Giacosa (Neive)', note: 'Across the river from Alba, Giacosa is one of the legendary names — making both Barolo and Barbaresco at the highest level. The famous "red label" Riservas come only in great vintages.' },
+          { time: 'Mid-morning', place: 'Drive into Roero — Vietti or Malvirà', note: 'Malvirà in Canale specialises in Roero Arneis and shows how serious this once-overlooked white can be. Tour and tasting often include their own restaurant for lunch.' },
+          { time: 'Lunch', place: 'Ristorante Malvirà or All\'Enoteca, Canale', note: 'All\'Enoteca is one Michelin star, ambitious modern Piedmontese cooking with a serious local-focused wine list.' },
+          { time: 'Afternoon', place: 'Cantina del Glicine or any Moscato producer in Castiglione Tinella', note: 'Moscato d\'Asti from a small producer is a revelation — low-alcohol, frothy, peach-and-rose, perfect for any time of day. Ceretto\'s "Moscato d\'Asti I Vignaioli di Santo Stefano" is a benchmark.' },
+          { time: 'Late afternoon', place: 'Drive through the Langhe', note: 'Take small back roads through Neive, Treiso, Mango. The hills are a UNESCO World Heritage landscape — one of the most beautiful agricultural panoramas anywhere.' },
+          { time: 'Evening', place: 'Final dinner — Piazza Duomo (Alba)', note: 'For a splurge — Enrico Crippa\'s three-Michelin-starred restaurant in central Alba is one of Italy\'s greatest. Or for something casual and excellent: La Libera in Alba\'s old town for trofie, brasato, and a Barbera.' }
+        ]
+      }
+    ],
+    extras: {
+      'If you have a 4th day': 'Drive south to the Ligurian coast (1.5h to Genoa) for a complete change of scene — focaccia, pesto, the Cinque Terre. Or head north into the Alps for Carema (Nebbiolo on terraced mountainsides).',
+      'Wines to bring home': 'A classic-style Barolo from a single great cru (Bussia, Cannubi, Brunate, Rocche di Castiglione) at 5–10 years of age, a Barbaresco from Produttori del Barbaresco for value, an Arneis for white-wine variety, and a Moscato d\'Asti to remind you Italian sweet wine can be light-hearted.',
+      'Glossary': 'Barolo and Barbaresco are both 100% Nebbiolo, but from different zones with different soils and microclimates. Barolo: minimum 38 months ageing (62 for Riserva). Barbaresco: 26 months (50 for Riserva). "MGA" labels show the official vineyard sub-zone (Cannubi, Rabajà, etc.). Langhe Nebbiolo is the entry-level designation — same grape, less ageing required.'
+    }
+  },
+  {
+    id: 'champagne',
+    name: 'Champagne',
+    subtitle: 'A long weekend through Reims and Épernay',
+    duration: '2 days',
+    country: 'France',
+    region: 'Champagne',
+    intro: 'A short, focused trip through the world\'s most famous sparkling wine region. Two days is enough to see the great houses of Reims, drive the Montagne de Reims and Côte des Blancs, and eat extremely well. Easily done from Paris by train.',
+    practical: {
+      'Best time': 'May–June for vineyard greenery and mild weather, or September for the harvest. The cellars are a constant 12°C year-round, so winter visits are entirely viable too — and quieter.',
+      'Getting there': 'TGV from Paris Gare de l\'Est to Reims in 45 minutes. Easy day-trip from Paris if you\'re really pressed for time, but staying overnight in Reims unlocks evening tastings and grand-house dinners.',
+      'Base': 'Reims for grand cathedrals, big houses (Veuve Clicquot, Taittinger, Pommery), and Michelin-starred dining. Épernay for being right in the vines and walking the famous Avenue de Champagne. Reims is more interesting if it\'s your first time.',
+      'Booking': 'The grandes maisons (Taittinger, Veuve Clicquot, Pommery, Ruinart) take walk-ins for daily tours but reservations recommended. Small grower-Champagne producers (the interesting ones) require advance email contact.'
+    },
+    days: [
+      {
+        day: 1,
+        title: 'Reims & the great houses',
+        subtitle: 'Cathedrals above ground, chalk cellars below',
+        description: 'Reims is built over Roman chalk quarries that the great Champagne houses converted into cellars in the 18th and 19th centuries. The day combines grand cathedral architecture, vast underground crayères, and the kings of the region.',
+        stops: [
+          { time: 'Morning', place: 'Cathédrale Notre-Dame de Reims', note: 'The coronation cathedral of French kings. The Chagall stained-glass windows in the apse are extraordinary. Spend an hour.' },
+          { time: 'Late morning', place: 'Taittinger', note: 'Among the more atmospheric of the grand-house tours — descend into ancient Gallo-Roman chalk pits, then 4th-century crayères beneath a former Benedictine abbey. Tasting flight at the end.' },
+          { time: 'Lunch', place: 'Le Foch or Brasserie du Boulingrin, Reims', note: 'Le Foch is one Michelin star and excellent. For something more relaxed and classic, Brasserie du Boulingrin (a 1925 Art Deco brasserie) is a Reims institution.' },
+          { time: 'Afternoon', place: 'Pommery or Ruinart', note: 'Pommery has 18 km of Gallo-Roman crayères, often with contemporary art installations — a unique combination. Ruinart is the oldest Champagne house (1729); their tour and tasting is more refined and less crowded.' },
+          { time: 'Evening', place: 'L\'Assiette Champenoise, Tinqueux', note: 'For a splurge — three Michelin stars, just outside Reims. Or stay central with Racine (one Michelin star) or the bistro at Hôtel Le Crayères. Champagne with food is the whole point of being here.' }
+        ]
+      },
+      {
+        day: 2,
+        title: 'Côte des Blancs & Épernay',
+        subtitle: 'Blanc de Blancs, the Avenue de Champagne, grower wines',
+        description: 'Drive (or take the short train) south to the Côte des Blancs — the strip of pure Chardonnay villages south of Épernay where Blanc de Blancs (100% Chardonnay) Champagne is born. Then back to Épernay for the famous Avenue de Champagne.',
+        stops: [
+          { time: 'Morning', place: 'Le Mesnil-sur-Oger', note: 'A Grand Cru village with the legendary Salon and Krug Clos du Mesnil vineyards. Wander the village; visit the Musée de la Vigne et du Vin (small but excellent for context).' },
+          { time: 'Mid-morning', place: 'Champagne Pierre Péters or Champagne Larmandier-Bernier (Vertus)', note: 'Two of the most respected grower-producers, both biodynamic, both making astonishing Blanc de Blancs from Grand Cru sites. Email at least 3 weeks ahead.' },
+          { time: 'Lunch', place: 'La Briqueterie or La Table Kobus, Épernay area', note: 'La Briqueterie is a hotel restaurant with one Michelin star and Champagne pairings to die for. La Table Kobus is more casual but has an extraordinary list of grower Champagnes.' },
+          { time: 'Afternoon', place: 'Avenue de Champagne, Épernay', note: 'A 1km street with the headquarters of Moët & Chandon, Pol Roger, Perrier-Jouët, Mercier, and others — and 200 million bottles ageing beneath it. Walk it; visit one or two houses (Pol Roger or Perrier-Jouët are highlights).' },
+          { time: 'Late afternoon', place: 'Drive through Cumières and Hautvillers', note: 'Hautvillers is where Dom Pérignon is buried (in the church abbey) — the legendary 17th-century monk credited with refining the méthode champenoise. The village vineyards have lovely valley views.' },
+          { time: 'Evening', place: 'Train back to Paris or one more dinner in Reims', note: 'The TGV runs into the evening. If staying — try Le Jardin Les Crayères (the more accessible bistro at the Crayères estate) or back to L\'Assiette Champenoise.' }
+        ]
+      }
+    ],
+    extras: {
+      'If you have a 3rd day': 'Drive into the Aube department (1.5h south) — Champagne\'s "other" region, where Pinot Noir dominates and prices are more reasonable. Visit Drappier (favourite of Charles de Gaulle) in Urville.',
+      'Wines to bring home': 'A grower Blanc de Blancs from Le Mesnil or Vertus (Pierre Péters, Larmandier-Bernier, Pierre Moncuit), a Pinot Noir-dominant Blanc de Noirs (Egly-Ouriet from Ambonnay if you can find it), and a single bottle of grand-house prestige cuvée — Krug Grande Cuvée, Dom Pérignon, or Cristal — for celebrations.',
+      'Glossary': 'Brut Nature/Zero Dosage (driest), Extra Brut, Brut, Extra Dry, Sec, Demi-Sec, Doux (sweetest). Blanc de Blancs = 100% Chardonnay. Blanc de Noirs = 100% black grapes (Pinot Noir and/or Pinot Meunier). NV = Non-Vintage (the house style). Vintage = a single year, only declared in great years.'
+    }
+  },
+  {
+    id: 'mosel',
+    name: 'Mosel',
+    subtitle: 'Three days along the world\'s steepest Riesling vineyards',
+    duration: '3 days',
+    country: 'Germany',
+    region: 'Mosel',
+    intro: 'The Mosel is a thin ribbon of slate vineyards along a serpentine river — landscapes so vertical you wonder how anyone harvests them. The wines are unlike any other: low alcohol, electric acidity, ranging from bone-dry to lusciously sweet, and capable of decades of ageing. Three days from Bernkastel through the Middle Mosel.',
+    practical: {
+      'Best time': 'May–June for green hillsides and mild walking weather, September for harvest. The Mosel is dramatic in autumn colour. Winter is quiet but most producers stay open by appointment.',
+      'Getting there': 'Fly to Frankfurt (2h drive), Luxembourg (1.5h), or Cologne (2h). A car is helpful but not essential — the regional train along the river connects most key villages.',
+      'Base': 'Bernkastel-Kues for a charming half-timbered medieval town in the heart of the Middle Mosel. Or Traben-Trarbach for Art Nouveau riverfront and a quieter base. Avoid the brand-name village of Trier as a wine base — too far from the best vineyards.',
+      'Booking': 'Almost every Mosel producer is small and family-run; advance email is essential. Most welcome thoughtful visitors warmly. The wineries below all do excellent tastings for serious enthusiasts — book 2 weeks ahead.'
+    },
+    days: [
+      {
+        day: 1,
+        title: 'Bernkastel & the Middle Mosel',
+        subtitle: 'Doctor, Lay, and the heart of Riesling',
+        description: 'Bernkastel-Kues sits at the centre of the most concentrated cluster of legendary Mosel vineyards. The Doctor (Bernkasteler Doctor) is the most famous Riesling vineyard in Germany — a tiny south-facing slope right above the town with its own microclimate.',
+        stops: [
+          { time: 'Morning', place: 'Walk through Bernkastel-Kues old town', note: 'The market square is one of Germany\'s prettiest — half-timbered houses, the 17th-century Spitzhäuschen (the leaning house), and the riverfront. Climb up to the Burg Landshut ruin for the panoramic vineyard view.' },
+          { time: 'Late morning', place: 'Weingut Wwe. Dr. H. Thanisch (Erben Thanisch)', note: 'One of the four owners of the legendary Doctor vineyard. Tasting in their historic cellars in Bernkastel — the Doctor Spätlese is one of Germany\'s great wines.' },
+          { time: 'Lunch', place: 'Restaurant Rotisserie Royale, Bernkastel', note: 'Refined regional cooking with a deep Mosel wine list. Or for something more casual and equally good: Weinstube Spitzhäuschen for traditional Mosel dishes (sausages, sauerbraten, regional cheeses).' },
+          { time: 'Afternoon', place: 'Drive to Wehlen and Graach', note: 'The road from Bernkastel along the river passes Graacher Himmelreich, Wehlener Sonnenuhr (the famous "sundial" vineyard with the actual painted sundial visible from the road), Zeltinger Sonnenuhr. These are some of the most legendary vineyards on Earth.' },
+          { time: 'Late afternoon', place: 'Weingut Joh. Jos. Prüm (J.J. Prüm), Wehlen', note: 'A pilgrimage. The Prüm style is uniquely austere, slow-evolving, lavishly long-lived. Visits are formal and traditional; book well ahead. Some allocations only released years after vintage.' },
+          { time: 'Evening', place: 'Dinner at Weinromantikhotel Richtershof, Mülheim', note: 'Excellent regional cooking with an extraordinary local wine list. Or back in Bernkastel — Bockshaut for traditional Mosel dishes by the river.' }
+        ]
+      },
+      {
+        day: 2,
+        title: 'Piesport, Trittenheim, and Saar tributary',
+        subtitle: 'Volcanic slate and the Saar\'s thrilling acidity',
+        description: 'Drive west through Piesport (Piesporter Goldtröpfchen) and Trittenheim, then divert south up the Saar valley — a Mosel tributary that produces some of the most racy, vibrant Rieslings in the world. The Saar is colder, the wines more cutting.',
+        stops: [
+          { time: 'Morning', place: 'Drive to Piesport', note: 'The Goldtröpfchen ("little gold drops") vineyard is an enormous south-facing amphitheatre rising directly behind the village. Walk the lower slopes for a sense of the scale.' },
+          { time: 'Mid-morning', place: 'Reinhold Haart, Piesport', note: 'One of the great Goldtröpfchen producers. Family-run, tiny, intensely focused. Theo Haart makes wines of extraordinary precision.' },
+          { time: 'Lunch', place: 'Restaurant Schanz, Piesport area', note: 'A small village restaurant with a serious wine list focused on Mosel growers. Try the local trout if it\'s on the menu.' },
+          { time: 'Early afternoon', place: 'Drive south to the Saar — Wiltingen and Kanzem', note: 'A 30-minute drive into a quieter, even more dramatic valley. Stop at the Scharzhofberg vineyard — visible from the road in Wiltingen, one of the most legendary Riesling sites in the world.' },
+          { time: 'Afternoon', place: 'Egon Müller-Scharzhof or Van Volxem', note: 'Egon Müller is the great traditionalist — the Scharzhofberger Auslese and TBA wines are legendary and wildly expensive. Visits require connections. Van Volxem is the modern face of the Saar revival — easier to visit, increasingly important. Try Roman Niewodniczanski\'s ambitious dry Saar Rieslings.' },
+          { time: 'Evening', place: 'Dinner at Weingut Karthäuserhof or back to Bernkastel', note: 'Karthäuserhof is in the Ruwer (another Mosel tributary) — a 12th-century estate with extraordinary wines and a small restaurant. Otherwise return to Bernkastel area.' }
+        ]
+      },
+      {
+        day: 3,
+        title: 'Erden, Ürzig, and the Lower Mosel',
+        subtitle: 'Red slate, dramatic switchbacks, finishing touches',
+        description: 'A final day exploring the lower (downstream) Middle Mosel — Ürzig with its distinctive red slate, Erden, and on toward the dramatic switchbacks of the Lower Mosel where the river loops back on itself.',
+        stops: [
+          { time: 'Morning', place: 'Drive to Erden and Ürzig', note: 'The Ürziger Würzgarten ("spice garden") vineyard is volcanic red slate, producing wines with a distinctive exotic-spice character. Erdener Treppchen is on the same hillside — pure grey slate, completely different.' },
+          { time: 'Late morning', place: 'Weingut Dr. Loosen (Bernkastel) or Weingut Mönchhof (Ürzig)', note: 'Dr. Loosen is the modern face of the Mosel — Ernst Loosen has done more than anyone to bring Mosel Riesling to international attention. Mönchhof is a former monastery with cellars dating to 1177 — lovely visit, classical wines.' },
+          { time: 'Lunch', place: 'Burgrestaurant Landshut or Mosel-Restaurant Lay, Bernkastel', note: 'The Burgrestaurant is in the castle ruin above town — head up for the view and a long lunch. Try Mosel-style sauerbraten or fresh river fish.' },
+          { time: 'Afternoon', place: 'Drive to the Calmont vineyard, Bremm', note: 'A 50-minute drive downstream — the Calmont in Bremm is officially Europe\'s steepest vineyard (up to 65° gradient). The hiking path through the vineyards (the Calmontklettersteig) gives spectacular views; bring proper shoes.' },
+          { time: 'Evening', place: 'Final dinner — Restaurant Schanz (Piesport) or back to Bernkastel', note: 'Wherever you end up, drink one more bottle of well-aged Riesling Spätlese with dessert. The Mosel rewards repeat visits.' }
+        ]
+      }
+    ],
+    extras: {
+      'If you have a 4th day': 'Drive west to Trier — Germany\'s oldest city, founded by the Romans, with extraordinary architecture (Porta Nigra, Imperial Baths, Roman amphitheatre). Or north into the Eifel hills for the dramatic Volcanic Eifel landscape.',
+      'Wines to bring home': 'A Kabinett or Spätlese from a great vineyard (Wehlener Sonnenuhr, Bernkasteler Doctor, Scharzhofberger) at modest price — these age for 30+ years. A bone-dry Grosses Gewächs from Van Volxem or Heymann-Löwenstein for the modern dry Mosel style. And a small bottle of TBA or Eiswein for special occasions — these are some of the world\'s greatest sweet wines.',
+      'Glossary': 'Mosel sweetness levels (in ascending order of ripeness): Kabinett, Spätlese, Auslese, Beerenauslese (BA), Trockenbeerenauslese (TBA), Eiswein. "Trocken" = dry; "Halbtrocken"/"Feinherb" = off-dry; otherwise expect noticeable sweetness balanced by high acid. "Grosses Gewächs" (GG) = a top dry wine from a designated single vineyard. "VDP" on a label = membership of the prestigious quality producers\' association.'
+    }
+  },
+  {
+    id: 'douro',
+    name: 'Douro Valley',
+    subtitle: 'Three days along Portugal\'s vertiginous river of wine',
+    duration: '3 days',
+    country: 'Portugal',
+    region: 'Douro',
+    intro: 'The Douro is arguably the world\'s most beautiful wine landscape — UNESCO-listed terraces cut into schist hillsides above a deep, slow river. Famous for Port (fortified) but increasingly for serious dry table wines too. This trip starts in Porto, then heads up the river into the heart of the Cima Corgo.',
+    practical: {
+      'Best time': 'May–June for green terraces and wildflowers, September–October for harvest (foot-treading still happens at some quintas). Avoid July–August — extremely hot.',
+      'Getting there': 'Fly to Porto. From there: drive (1.5h to Régua, 2h to Pinhão), take the train along the river (one of the world\'s great rail journeys), or even cruise — multi-day boat trips run from Porto.',
+      'Base': 'Pinhão for the heart of the great quintas. Régua for a larger town with more services. Or stay at one of the quinta-hotels (Quinta do Crasto, Quinta de la Rosa, Quinta Nova) for total immersion.',
+      'Booking': 'Major quintas (Sandeman, Graham\'s, Taylor\'s) take walk-ins in Porto\'s Vila Nova de Gaia warehouses. For the actual Douro Valley quintas, book 1–2 weeks ahead. Lunches at quintas are particularly worth booking.'
+    },
+    days: [
+      {
+        day: 1,
+        title: 'Porto & Vila Nova de Gaia',
+        subtitle: 'The port lodges across the river',
+        description: 'Spend the first day in Porto. The Port houses are not actually in Porto itself but across the Douro in Vila Nova de Gaia, where Port has been aged for centuries in cool riverside lodges before shipping. End with sunset over the river from the Dom Luís I bridge.',
+        stops: [
+          { time: 'Morning', place: 'Porto old town walk — Ribeira', note: 'The riverfront Ribeira district is a UNESCO World Heritage site. Walk down from the cathedral through the steep narrow streets to the river. Cross the Dom Luís I bridge\'s upper deck for the great view.' },
+          { time: 'Late morning', place: 'Sandeman or Graham\'s, Vila Nova de Gaia', note: 'Sandeman is the most famous (the silhouette logo) and runs slick guided tours. Graham\'s (set higher up the hill) has more atmospheric old lodges and a wonderful tasting flight including a 20-year tawny and an LBV.' },
+          { time: 'Lunch', place: 'The Yeatman or Vinum at Graham\'s', note: 'The Yeatman is a Michelin-starred restaurant inside the Yeatman hotel with a panoramic Porto view. Vinum at Graham\'s is more relaxed but excellent — try the bacalhau (salt cod) preparations with white Port aperitif.' },
+          { time: 'Afternoon', place: 'Taylor\'s and Croft', note: 'Two more historic houses on the same hillside. Taylor\'s does excellent vintage Port flights. Croft has perhaps the most intimate small-group tours.' },
+          { time: 'Evening', place: 'Dinner in Porto — Cantinho do Avillez or Tapabento', note: 'Cantinho is José Avillez\'s (Portugal\'s most famous chef) Porto restaurant — modern Portuguese with serious wine list. Tapabento is a smaller spot near São Bento station — fantastic seafood tapas.' }
+        ]
+      },
+      {
+        day: 2,
+        title: 'Up the Douro to Pinhão',
+        subtitle: 'The most spectacular drive in wine',
+        description: 'Drive up the river — or, if you can manage the timing, take the morning train from Porto to Pinhão along the riverside. The route gets more spectacular as you climb into the schist terraces of the Cima Corgo. Spend the afternoon at quintas around Pinhão.',
+        stops: [
+          { time: 'Morning', place: 'Drive (or train) Porto to Pinhão', note: 'If driving: the N222 from Régua to Pinhão has been called the world\'s greatest driving road. If by train: the route from Régua hugs the river\'s edge through tunnels and along impossibly narrow ledges.' },
+          { time: 'Late morning', place: 'Quinta do Bomfim (Symington family) or Quinta do Seixo (Sandeman)', note: 'Bomfim is right next to Pinhão village — a magnificent 19th-century quinta with vintage Port lodge and panoramic views. Tour and tasting include their flagship vintage Ports. Seixo is across the river, with newer state-of-the-art facilities and equally great views.' },
+          { time: 'Lunch', place: 'Quinta do Crasto for lunch (book ahead)', note: 'Famous for its infinity pool stretching out over the vines. Lunch with the Roquette family\'s wines is one of the great Douro experiences. They make exceptional dry Reds (Crasto Reserva Old Vines) as well as Port.' },
+          { time: 'Afternoon', place: 'Drive the back roads — Provesende, Favaios', note: 'The hilltop village of Provesende is one of the prettiest in the region. Favaios is the Moscatel del Douro centre — visit the Cooperativa de Favaios for an honest €5 tasting of their fortified Moscatel.' },
+          { time: 'Evening', place: 'Dinner at Quinta Nova or back to Pinhão', note: 'Quinta Nova de Nossa Senhora do Carmo is a hotel-quinta with terraced restaurant overlooking the river — book ahead for sunset. Otherwise dine at the Vintage House Hotel in Pinhão for refined Douro cuisine with their own quinta\'s wines.' }
+        ]
+      },
+      {
+        day: 3,
+        title: 'Higher up — Tua and Vale Mendiz',
+        subtitle: 'Smaller producers, the dry Douro revolution',
+        description: 'Final day exploring further up the Douro and into the side valleys, focusing on the producers leading the dry-table-wine revolution that has transformed the Douro from "just a Port region" into one of Europe\'s most exciting still-wine regions.',
+        stops: [
+          { time: 'Morning', place: 'Niepoort (Quinta de Nápoles, Vale Mendiz)', note: 'Dirk Niepoort is the most influential modern Douro producer — both Port and dry wines, all at the highest level. The Charme, Tiara, and Robustus reds are benchmark modern Douro. Tour and tasting at the Quinta de Nápoles, around 30 minutes from Pinhão.' },
+          { time: 'Late morning', place: 'Quinta do Vallado or Quinta da Romaneira', note: 'Vallado (run by the Ferreira family — direct descendants of Dona Antónia Ferreira, the legendary 19th-century Douro producer) is in the Cima Corgo with both classic Ports and serious dry wines. Romaneira has stunning hilltop views and elegant modern wines.' },
+          { time: 'Lunch', place: 'DOC Restaurante (Folgosa)', note: 'Chef Rui Paula\'s riverside restaurant with floor-to-ceiling Douro views. One Michelin star, contemporary Portuguese cooking with deep regional wine list. Book ahead — this is one of the great destination restaurants of the Douro.' },
+          { time: 'Afternoon', place: 'Drive to Vale do Tua', note: 'The Tua river valley joins the Douro near Pinhão and is one of the most dramatic side valleys. Quinta dos Murças and Quinta do Pôpa are highlights here.' },
+          { time: 'Late afternoon', place: 'Quinta de la Rosa, Pinhão', note: 'A great final tasting — family-run, on the riverbank just outside Pinhão. Sophia Bergqvist makes both Port and table wines, all delicious. Their Reserva is one of the most consistently excellent dry Douros.' },
+          { time: 'Evening', place: 'Final dinner — Vintage House Pinhão or drive back to Porto', note: 'The drive back to Porto is about 2 hours; if you have an early flight, head back this evening. Otherwise stay one more night by the river and savour it.' }
+        ]
+      }
+    ],
+    extras: {
+      'If you have a 4th day': 'Visit the Côa Valley archaeological park further up the Douro — UNESCO-listed Palaeolithic rock art along the Côa river. Or head north into the Vinho Verde region (1h from Porto) for completely different wines — light, slightly fizzy whites from Loureiro, Alvarinho, and Trajadura grapes.',
+      'Wines to bring home': 'A Vintage Port from a recent declared year (2016, 2017, 2018) for ageing — they need 15+ years. A 20-Year Tawny for ready-to-drink complexity. A serious dry Douro red — Niepoort Robustus, Quinta do Crasto Reserva Old Vines, or Quinta do Vale Meão. And a bottle of dry white Douro from Anselmo Mendes or Quinta dos Roques to surprise people with how good Portuguese white wine has become.',
+      'Glossary': 'Port styles: Vintage (single great year, bottle-aged for decades), LBV (Late Bottled Vintage — affordable Vintage style), Tawny (cask-aged, oxidative — comes in 10/20/30/40 Year designations), Ruby (younger fruit-forward style), White Port (aperitif, often served with tonic). "Quinta" means estate. The Douro is divided into three sub-regions: Baixo Corgo (downstream, milder), Cima Corgo (the heart, where most great quintas are), and Douro Superior (upstream, hotter, drier, increasingly important for table wine).'
+    }
   }
+
 ];
 
 // ========== Grapes encyclopedia ==========

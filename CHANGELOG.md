@@ -5,6 +5,11 @@ All notable changes to Mikael's Vin are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] — 2026-04-21
+
+### Added
+- Five new wine travel itineraries: Burgundy (3 days, Côte d'Or), Piedmont (3 days, Barolo & Barbaresco), Champagne (2 days, Reims & Épernay), Mosel (3 days, Bernkastel & Saar), Douro Valley (3 days, Porto to Pinhão)
+
 ## [1.0.0] — 2026-04-21
 
 First versioned release. Everything below has shipped across iterative sessions.

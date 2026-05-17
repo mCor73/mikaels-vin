@@ -5,6 +5,19 @@ All notable changes to Mikael's Vin are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] — 2026-04-21
+
+### Added
+- **Progressive Web App (PWA) support** — the app is now properly installable on iPhone and works fully offline after first load
+- `manifest.json` defining app name, icons, theme colour, and standalone display mode
+- `sw.js` service worker that caches the app shell on install, serving from cache when offline
+- Custom wine-glass icons in 192px, 512px, maskable 512px, and Apple touch icon (180px) sizes, plus a favicon
+- Apple-specific meta tags for proper home-screen integration
+- Service worker auto-updates the cache when a new version is deployed — next launch picks up the changes automatically
+
+### How to use
+On iPhone: open the app's URL in Safari → tap Share → Add to Home Screen. The app now launches in standalone mode (no Safari chrome) with a proper icon. After the first online launch, it works offline indefinitely.
+
 ## [1.3.0] — 2026-04-21
 
 ### Removed

@@ -5,6 +5,29 @@ All notable changes to Mikael's Vin are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] — 2026-04-21
+
+### Changed
+- **Tasting note form rebuilt to follow the WSET Level 3 Systematic Approach to Tasting Wine®** — the industry-standard structured tasting method
+- Form is now organised into Appearance / Nose / Palate / Conclusions sections matching the WSET SAT layout
+
+### Added (WSET fields)
+- **Appearance**: Clarity (clear/hazy), Intensity (pale/medium/deep), Colour (per wine type: lemon-green to brown for whites, purple to brown for reds, pink/salmon/orange for rosé, etc.), free notes for legs/deposit/bubbles
+- **Nose**: Condition (clean/unclean), Intensity (5-step light to pronounced), Development (youthful to past its best)
+- **Palate**: Sweetness (6-step dry to luscious), Acidity (5-step low to high), Tannin (5-step), Alcohol (low/medium/high), Body (5-step), Mousse (delicate/creamy/aggressive — shown only for sparkling), Flavour intensity (5-step), Finish (5-step)
+- **Conclusions**: Quality level (faulty/poor/acceptable/good/very good/outstanding), Readiness for drinking (too young/can drink/drink now/too old)
+- **Wine-Lexicon aroma picker** — clickable tag picker organised by tier (Primary / Secondary / Tertiary) and cluster (Floral, Green fruit, Citrus, Stone fruit, Tropical, Red fruit, Black fruit, Herbaceous, Herbal, Pungent spice, Other for primary; Yeast, MLF, Oak for secondary; oxidation, fruit development, bottle age for tertiary). Tap to add a descriptor; tap again to remove. Cluster headers show a count badge when descriptors are selected.
+
+### Detail view
+- WSET fields rendered in a clean structured grid (label + value rows)
+- Selected aroma tags grouped by cluster and shown as pills
+- Free-text notes still supported alongside structured fields
+- Backward compatible — older notes (without WSET fields) still display normally
+
+### Notes
+- Existing notes from before v1.5.0 remain readable. Their fields just appear as free-text where applicable; WSET sections only appear once you edit and fill them in.
+- The Wine-Lexicon descriptors follow the WSET Level 3 SAT lexicon (June 2016 edition).
+
 ## [1.4.0] — 2026-04-21
 
 ### Added

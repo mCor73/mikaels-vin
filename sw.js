@@ -4,7 +4,7 @@
 // CACHE_VERSION bumps must match a release. When you change app code,
 // bump this version so users automatically get the new code on next launch.
 
-const CACHE_VERSION = 'mikaels-vin-v1.4.0';
+const CACHE_VERSION = 'mikaels-vin-v1.5.0';
 
 // Files that make up the app shell. Same-origin only.
 const APP_SHELL = [

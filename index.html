@@ -2313,6 +2313,274 @@
     padding: 22px 0 8px;
   }
 
+  /* ========== WSET DETAIL VIEW ========== */
+  .detail-wset-grid {
+    margin: 12px 0;
+    padding: 14px 16px;
+    background: var(--cream-warm);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .detail-wset-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 4px 0;
+    border-bottom: 1px dashed var(--border-soft);
+    line-height: 1.5;
+  }
+
+  .detail-wset-row:last-child { border-bottom: none; }
+
+  .detail-wset-label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+
+  .detail-wset-value {
+    font-family: 'Fraunces', serif;
+    font-size: 14.5px;
+    color: var(--ink);
+    text-align: right;
+    font-weight: 500;
+  }
+
+  .detail-aroma-groups {
+    margin: 14px 0 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .detail-aroma-cluster {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .detail-aroma-cluster-name {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--wine);
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    flex-shrink: 0;
+  }
+
+  .detail-aroma-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .detail-aroma-tag {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 100px;
+    background: var(--paper);
+    border: 1px solid var(--border-soft);
+    font-family: 'Fraunces', serif;
+    font-size: 12.5px;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  /* ========== WSET FORM ========== */
+  .form-subtitle {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 12.5px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin: -8px 22px 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .wset-section {
+    margin: 24px 0;
+    padding: 18px 18px 6px;
+    background: var(--paper);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    position: relative;
+  }
+
+  .wset-section-label {
+    font-family: 'Fraunces', serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--wine);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .field-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    .field-row-3 { grid-template-columns: 1fr 1fr; }
+    .field-row-3 .field:last-child { grid-column: span 2; }
+  }
+
+  .select.compact {
+    font-size: 13.5px;
+    padding: 9px 10px;
+  }
+
+  .textarea.short {
+    min-height: 50px;
+    max-height: 200px;
+  }
+
+  /* ===== Wine-Lexicon tag picker ===== */
+  .lex-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .lex-tier {
+    background: var(--cream-warm);
+    border-radius: 10px;
+    padding: 12px 12px 6px;
+  }
+
+  .lex-tier-head {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .lex-tier-name {
+    font-family: 'Fraunces', serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--wine);
+  }
+
+  .lex-tier-desc {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .lex-cluster {
+    border: none;
+    background: transparent;
+    margin-bottom: 4px;
+  }
+
+  .lex-cluster[open] {
+    margin-bottom: 12px;
+  }
+
+  .lex-cluster-summary {
+    list-style: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    padding: 7px 4px 7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    transition: background 0.15s ease;
+  }
+
+  .lex-cluster-summary::-webkit-details-marker { display: none; }
+
+  .lex-cluster-summary::before {
+    content: '▸';
+    font-size: 10px;
+    color: var(--muted);
+    margin-right: 8px;
+    transition: transform 0.15s ease;
+    width: 10px;
+    display: inline-block;
+  }
+
+  .lex-cluster[open] > .lex-cluster-summary::before {
+    transform: rotate(90deg);
+  }
+
+  .lex-cluster.has-selected > .lex-cluster-summary {
+    background: rgba(176, 141, 62, 0.08);
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .lex-cluster-name {
+    flex: 1;
+    font-family: 'Fraunces', serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+
+  .lex-cluster-count {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--gold);
+    background: rgba(176, 141, 62, 0.15);
+    padding: 1px 7px;
+    border-radius: 100px;
+    margin-left: 6px;
+  }
+
+  .lex-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px 0 4px 18px;
+  }
+
+  .lex-tag {
+    padding: 5px 11px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+    font-family: 'Fraunces', serif;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.15s ease;
+    line-height: 1.3;
+  }
+
+  .lex-tag:active { transform: scale(0.94); }
+
+  .lex-tag.on {
+    background: var(--wine);
+    border-color: var(--wine);
+    color: var(--cream);
+    font-weight: 500;
+  }
+
   /* ========== TASTINGS SECTION (home) ========== */
   .tastings-section {
     margin: 14px 16px 4px;
@@ -3801,7 +4069,7 @@
 'use strict';
 
 // ========== App version ==========
-const APP_VERSION = '1.4.0';
+const APP_VERSION = '1.5.0';
 const APP_BUILD_DATE = '2026-04-21';
 
 // ========== Storage shim ==========
@@ -3877,6 +4145,96 @@ const DROPBOX_FILE_PATH = '/cellar.json';
 
 const COLOURS = ['Red', 'White', 'Rosé', 'Orange', 'Sparkling', 'Fortified', 'Dessert'];
 const STYLES = ['Dry', 'Off-Dry', 'Medium Dry', 'Medium Sweet', 'Sweet', 'Luscious'];
+
+// ========== WSET Level 3 SAT constants ==========
+const WSET = {
+  clarity: ['', 'clear', 'hazy'],
+  intensityAppearance: ['', 'pale', 'medium', 'deep'],
+  // Colour options per wine type
+  colourWhite: ['', 'lemon-green', 'lemon', 'gold', 'amber', 'brown'],
+  colourRose: ['', 'pink', 'salmon', 'orange'],
+  colourRed: ['', 'purple', 'ruby', 'garnet', 'tawny', 'brown'],
+  // Nose / Palate intensity & finish scales (5-step)
+  scale5: ['', 'light', 'medium(-)', 'medium', 'medium(+)', 'pronounced'],
+  // Acid / tannin
+  scaleStructure: ['', 'low', 'medium(-)', 'medium', 'medium(+)', 'high'],
+  // Body (5-step low to full)
+  scaleBody: ['', 'light', 'medium(-)', 'medium', 'medium(+)', 'full'],
+  // Sweetness (6-step)
+  sweetness: ['', 'dry', 'off-dry', 'medium-dry', 'medium-sweet', 'sweet', 'luscious'],
+  // Alcohol (3-step)
+  alcohol: ['', 'low', 'medium', 'high'],
+  // Mousse (for sparkling)
+  mousse: ['', 'delicate', 'creamy', 'aggressive'],
+  // Condition
+  condition: ['', 'clean', 'unclean (faulty?)'],
+  // Development
+  development: ['', 'youthful', 'developing', 'fully developed', 'tired / past its best'],
+  // Quality level
+  quality: ['', 'faulty', 'poor', 'acceptable', 'good', 'very good', 'outstanding'],
+  // Readiness for drinking
+  readiness: [
+    '',
+    'too young — has potential',
+    'can drink now, but has potential for ageing',
+    'drink now: not suitable for ageing or further ageing',
+    'too old',
+  ],
+};
+
+// Wine-Lexicon clusters — primary / secondary / tertiary aroma descriptors
+const WSET_LEXICON = [
+  {
+    tier: 'Primary',
+    description: 'Aromas of the grape and alcoholic fermentation',
+    clusters: [
+      { name: 'Floral', items: ['acacia', 'honeysuckle', 'chamomile', 'elderflower', 'geranium', 'blossom', 'rose', 'violet'] },
+      { name: 'Green fruit', items: ['apple', 'gooseberry', 'pear', 'pear drop', 'quince', 'grape'] },
+      { name: 'Citrus fruit', items: ['grapefruit', 'lemon', 'lime', 'orange peel', 'lemon peel'] },
+      { name: 'Stone fruit', items: ['peach', 'apricot', 'nectarine'] },
+      { name: 'Tropical fruit', items: ['banana', 'lychee', 'mango', 'melon', 'passion fruit', 'pineapple'] },
+      { name: 'Red fruit', items: ['redcurrant', 'cranberry', 'raspberry', 'strawberry', 'red cherry', 'red plum'] },
+      { name: 'Black fruit', items: ['blackcurrant', 'blackberry', 'bramble', 'blueberry', 'black cherry', 'black plum'] },
+      { name: 'Dried / cooked fruit', items: ['fig', 'prune', 'raisin', 'sultana', 'kirsch', 'jamminess', 'baked fruits', 'stewed fruits', 'preserved fruits'] },
+      { name: 'Herbaceous', items: ['green bell pepper', 'grass', 'tomato leaf', 'asparagus', 'blackcurrant leaf'] },
+      { name: 'Herbal', items: ['eucalyptus', 'mint', 'medicinal', 'lavender', 'fennel', 'dill'] },
+      { name: 'Pungent spice', items: ['black pepper', 'white pepper', 'liquorice'] },
+      { name: 'Other', items: ['flint', 'wet stones', 'wet wool'] },
+    ],
+  },
+  {
+    tier: 'Secondary',
+    description: 'Aromas of post-fermentation winemaking',
+    clusters: [
+      { name: 'Yeast (lees, autolysis)', items: ['biscuit', 'bread', 'toast', 'pastry', 'brioche', 'bread dough', 'cheese'] },
+      { name: 'MLF', items: ['butter', 'cheese', 'cream'] },
+      { name: 'Oak', items: ['vanilla', 'cloves', 'nutmeg', 'coconut', 'butterscotch', 'toast', 'cedar', 'charred wood', 'smoke', 'chocolate', 'coffee', 'resinous'] },
+    ],
+  },
+  {
+    tier: 'Tertiary',
+    description: 'Aromas of maturation (oxidation, fruit development, bottle age)',
+    clusters: [
+      { name: 'Deliberate oxidation', items: ['almond', 'marzipan', 'hazelnut', 'walnut', 'chocolate', 'coffee', 'toffee', 'caramel'] },
+      { name: 'Fruit development (white)', items: ['dried apricot', 'marmalade', 'dried apple', 'dried banana'] },
+      { name: 'Fruit development (red)', items: ['fig', 'prune', 'tar', 'dried blackberry', 'dried cranberry', 'cooked blackberry', 'cooked red plum'] },
+      { name: 'Bottle age (white)', items: ['petrol', 'kerosene', 'cinnamon', 'ginger', 'nutmeg', 'toast', 'nutty', 'mushroom', 'hay', 'honey'] },
+      { name: 'Bottle age (red)', items: ['leather', 'forest floor', 'earth', 'mushroom', 'game', 'tobacco', 'vegetal', 'wet leaves', 'savoury', 'meaty', 'farmyard'] },
+    ],
+  },
+];
+
+// Helper: returns the colour-options array appropriate for the given wine colour
+function wsetColoursFor(colourType) {
+  if (colourType === 'White') return WSET.colourWhite;
+  if (colourType === 'Rosé') return WSET.colourRose;
+  if (colourType === 'Red') return WSET.colourRed;
+  // Orange/Sparkling/Fortified/Dessert: allow all (default to white for now)
+  if (colourType === 'Orange') return ['', 'pale gold', 'gold', 'amber', 'deep amber', 'brown'];
+  if (colourType === 'Sparkling') return ['', 'lemon-green', 'lemon', 'gold', 'pink', 'salmon'];
+  if (colourType === 'Fortified' || colourType === 'Dessert') return ['', 'lemon', 'gold', 'amber', 'tawny', 'brown'];
+  return WSET.colourWhite;
+}
 
 const SCALE = [
   { value: '--', label: '−−', desc: 'Low' },
@@ -6097,13 +6455,43 @@ async function setEventRank(wineId, rank) {
 function blankWine() {
   return {
     id: uid(),
+    // Basics
     name: '', vintage: '', date: todayISO(), event: '',
     producer: '', region: '', grape: '',
     colour: '', style: '',
     rating: 0, rpScore: 0, starred: false, eventRank: '',
+
+    // WSET Appearance
+    wsetClarity: '',
+    wsetAppearanceIntensity: '',
+    wsetColour: '',                   // specific colour shade per wine type
+    wsetAppearanceOther: '',          // free text: legs, deposit, bubbles…
+
+    // WSET Nose
+    wsetNoseCondition: '',
+    wsetNoseIntensity: '',
+    wsetNoseAromas: [],               // selected tags from lexicon (cluster:term)
+    wsetDevelopment: '',
+
+    // WSET Palate
+    wsetSweetness: '',
+    acid: '',                         // WSET acidity (kept name for back-compat)
+    tannin: '',                       // WSET tannin
+    wsetAlcohol: '',
+    body: '',                         // WSET body
+    wsetMousse: '',                   // for sparkling
+    wsetFlavourIntensity: '',
+    wsetPalateAromas: [],             // selected tags from lexicon
+    wsetFinish: '',
+
+    // WSET Conclusions
+    wsetQuality: '',
+    wsetReadiness: '',
+
+    // Free-text notes (kept for back-compatibility and freeform)
     appearance: '', nose: '',
-    acid: '', tannin: '', body: '',
     palate: '', summary: '',
+
     createdAt: Date.now(),
   };
 }
@@ -6642,12 +7030,75 @@ function renderDetail() {
 
   const chips = [];
   if (wine.colour) chips.push(`<span class="chip chip-colour"><span class="chip-swatch" style="background:${colourCssVar(wine.colour)}"></span>${escapeHtml(wine.colour)}</span>`);
-  if (wine.style)  chips.push(`<span class="chip">${escapeHtml(wine.style)}</span>`);
   if (wine.region) chips.push(`<span class="chip">${escapeHtml(wine.region)}</span>`);
   if (wine.grape)  chips.push(`<span class="chip">${escapeHtml(wine.grape)}</span>`);
   if (wine.event)  chips.push(`<button class="chip chip-event chip-link" id="eventChip" data-event-name="${escapeHtml(wine.event)}" type="button">${escapeHtml(wine.event)}</button>`);
 
-  const hasStructure = wine.acid || wine.tannin || wine.body;
+  // ===== WSET-aware section renderers =====
+  function renderTaggedAromas(tags) {
+    if (!Array.isArray(tags) || tags.length === 0) return '';
+    // Group by cluster (before the colon)
+    const grouped = {};
+    tags.forEach(t => {
+      const idx = t.indexOf(':');
+      if (idx < 0) return;
+      const cluster = t.slice(0, idx);
+      const term = t.slice(idx + 1);
+      if (!grouped[cluster]) grouped[cluster] = [];
+      grouped[cluster].push(term);
+    });
+    const groups = Object.entries(grouped).map(([cluster, terms]) => `
+      <div class="detail-aroma-cluster">
+        <span class="detail-aroma-cluster-name">${escapeHtml(cluster)}</span>
+        <span class="detail-aroma-terms">${terms.map(t => `<span class="detail-aroma-tag">${escapeHtml(t)}</span>`).join('')}</span>
+      </div>
+    `).join('');
+    return `<div class="detail-aroma-groups">${groups}</div>`;
+  }
+
+  function renderRow(label, value) {
+    if (!value) return '';
+    return `<div class="detail-wset-row"><span class="detail-wset-label">${escapeHtml(label)}</span><span class="detail-wset-value">${escapeHtml(value)}</span></div>`;
+  }
+
+  // Build the WSET-formatted sections
+  const appearanceFields = [
+    renderRow('Clarity', wine.wsetClarity),
+    renderRow('Intensity', wine.wsetAppearanceIntensity),
+    renderRow('Colour', wine.wsetColour),
+    renderRow('Other', wine.wsetAppearanceOther),
+  ].join('');
+
+  const noseFields = [
+    renderRow('Condition', wine.wsetNoseCondition),
+    renderRow('Intensity', wine.wsetNoseIntensity),
+    renderRow('Development', wine.wsetDevelopment),
+  ].join('');
+
+  const noseAromas = renderTaggedAromas(wine.wsetNoseAromas);
+
+  const palateBasics = [
+    renderRow('Sweetness', wine.wsetSweetness),
+    renderRow('Acidity', wine.acid),
+    renderRow('Tannin', wine.tannin),
+    renderRow('Alcohol', wine.wsetAlcohol),
+    renderRow('Body', wine.body),
+    renderRow('Mousse', wine.wsetMousse),
+    renderRow('Flavour intensity', wine.wsetFlavourIntensity),
+    renderRow('Finish', wine.wsetFinish),
+  ].join('');
+
+  const palateAromas = renderTaggedAromas(wine.wsetPalateAromas);
+
+  const conclusionFields = [
+    renderRow('Quality', wine.wsetQuality),
+    renderRow('Readiness', wine.wsetReadiness),
+  ].join('');
+
+  const hasAppearance = appearanceFields || wine.appearance;
+  const hasNose = noseFields || noseAromas || wine.nose;
+  const hasPalate = palateBasics || palateAromas || wine.palate;
+  const hasConclusions = conclusionFields || wine.summary;
 
   return `
     <div class="detail-view">
@@ -6671,36 +7122,39 @@ function renderDetail() {
         ${chips.length ? `<div class="detail-chips">${chips.join('')}</div>` : ''}
       </div>
 
-      <div class="section">
-        <div class="section-label">Appearance</div>
-        <div class="section-body">${escapeHtml(wine.appearance)}</div>
-      </div>
-
-      <div class="section">
-        <div class="section-label">Nose</div>
-        <div class="section-body">${escapeHtml(wine.nose)}</div>
-      </div>
-
-      ${hasStructure ? `
+      ${hasAppearance ? `
         <div class="section">
-          <div class="section-label">Structure</div>
-          <div class="structure">
-            ${renderStructureItem('Acid', wine.acid)}
-            ${renderStructureItem('Tannin', wine.tannin)}
-            ${renderStructureItem('Body', wine.body)}
-          </div>
+          <div class="section-label">Appearance</div>
+          ${appearanceFields ? `<div class="detail-wset-grid">${appearanceFields}</div>` : ''}
+          ${wine.appearance ? `<div class="section-body">${escapeHtml(wine.appearance)}</div>` : ''}
         </div>
       ` : ''}
 
-      <div class="section">
-        <div class="section-label">Palate</div>
-        <div class="section-body">${escapeHtml(wine.palate)}</div>
-      </div>
+      ${hasNose ? `
+        <div class="section">
+          <div class="section-label">Nose</div>
+          ${noseFields ? `<div class="detail-wset-grid">${noseFields}</div>` : ''}
+          ${noseAromas}
+          ${wine.nose ? `<div class="section-body">${escapeHtml(wine.nose)}</div>` : ''}
+        </div>
+      ` : ''}
 
-      <div class="section">
-        <div class="section-label">Summary</div>
-        <div class="section-body">${escapeHtml(wine.summary)}</div>
-      </div>
+      ${hasPalate ? `
+        <div class="section">
+          <div class="section-label">Palate</div>
+          ${palateBasics ? `<div class="detail-wset-grid">${palateBasics}</div>` : ''}
+          ${palateAromas}
+          ${wine.palate ? `<div class="section-body">${escapeHtml(wine.palate)}</div>` : ''}
+        </div>
+      ` : ''}
+
+      ${hasConclusions ? `
+        <div class="section">
+          <div class="section-label">Conclusions</div>
+          ${conclusionFields ? `<div class="detail-wset-grid">${conclusionFields}</div>` : ''}
+          ${wine.summary ? `<div class="section-body">${escapeHtml(wine.summary)}</div>` : ''}
+        </div>
+      ` : ''}
 
       ${(wine.event || wine.producer || wine.region || wine.grape) ? `
         <button class="add-another" id="addAnotherBtn">
@@ -7708,6 +8162,61 @@ function selectOptions(list, selected) {
   return none + opts;
 }
 
+// ========== WSET form helpers ==========
+function wsetSelect(name, options, selected, extraClass) {
+  const opts = options.map(o => {
+    const val = escapeHtml(o);
+    const sel = (o === selected) ? ' selected' : '';
+    const label = o === '' ? '—' : escapeHtml(o);
+    return `<option value="${val}"${sel}>${label}</option>`;
+  }).join('');
+  const cls = 'select compact' + (extraClass ? ' ' + extraClass : '');
+  return `<select class="${cls}" id="f-${name}" name="${name}">${opts}</select>`;
+}
+
+function wsetLexiconBlock(fieldName, selectedTags) {
+  // selectedTags is an array of strings like "Floral:rose"
+  const tags = new Set(selectedTags || []);
+  const tiers = WSET_LEXICON.map(tier => {
+    const clusterCards = tier.clusters.map((cluster, ci) => {
+      const items = cluster.items.map(item => {
+        const tagId = cluster.name + ':' + item;
+        const isOn = tags.has(tagId);
+        return `<button type="button" class="lex-tag${isOn ? ' on' : ''}" data-lex-field="${fieldName}" data-lex-tag="${escapeHtml(tagId)}">${escapeHtml(item)}</button>`;
+      }).join('');
+      const someSelected = cluster.items.some(it => tags.has(cluster.name + ':' + it));
+      const detailId = 'lex-' + fieldName + '-' + tier.tier.toLowerCase() + '-' + ci;
+      return `
+        <details class="lex-cluster${someSelected ? ' has-selected' : ''}"${someSelected ? ' open' : ''} id="${detailId}">
+          <summary class="lex-cluster-summary">
+            <span class="lex-cluster-name">${escapeHtml(cluster.name)}</span>
+            ${someSelected ? `<span class="lex-cluster-count">${cluster.items.filter(it => tags.has(cluster.name + ':' + it)).length}</span>` : ''}
+          </summary>
+          <div class="lex-tags">${items}</div>
+        </details>
+      `;
+    }).join('');
+    return `
+      <div class="lex-tier">
+        <div class="lex-tier-head">
+          <span class="lex-tier-name">${escapeHtml(tier.tier)}</span>
+          <span class="lex-tier-desc">${escapeHtml(tier.description)}</span>
+        </div>
+        ${clusterCards}
+      </div>
+    `;
+  }).join('');
+
+  // Hidden input that holds the JSON-serialised selection for form submission
+  return `
+    <input type="hidden" name="${fieldName}" id="f-${fieldName}" value="${escapeHtml(JSON.stringify([...tags]))}">
+    <div class="lex-wrap" data-lex-target="${fieldName}">
+      ${tiers}
+    </div>
+  `;
+}
+
+// ========== Render: Form (WSET Level 3 SAT) ==========
 function renderForm() {
   const w = state.formDraft;
   const isEdit = !!state.editingId;
@@ -7718,10 +8227,16 @@ function renderForm() {
     `<button type="button" class="rating-btn${n <= rating ? ' active' : ''}" data-rating="${n}">${n}</button>`
   ).join('');
 
+  // Choose colour shades appropriate to the wine type
+  const colourOpts = wsetColoursFor(w.colour);
+
+  const isSparkling = w.colour === 'Sparkling';
+
   return `
     <div class="form-view">
       <button class="back-btn" id="backBtn">← Cancel</button>
       <h1 class="form-title">${isEdit ? 'Edit <em>note</em>' : 'New <em>tasting</em>'}</h1>
+      <div class="form-subtitle">WSET Level 3 Systematic Approach to Tasting</div>
 
       ${!isEdit && state.wines.length > 0 ? `
         <div class="copy-link-box">
@@ -7734,106 +8249,203 @@ function renderForm() {
 
       <form id="wineForm" autocomplete="off">
 
-        <div class="field-row">
-          <div class="field">
-            <label class="field-label" for="f-name">Wine <span class="req">·</span></label>
-            <input class="input" type="text" id="f-name" name="name" value="${escapeHtml(w.name)}" placeholder="Château Margaux" required>
+        <!-- ===== Basics ===== -->
+        <div class="wset-section">
+          <div class="wset-section-label">Basics</div>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label" for="f-name">Wine <span class="req">·</span></label>
+              <input class="input" type="text" id="f-name" name="name" value="${escapeHtml(w.name)}" placeholder="Château Margaux" required>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-vintage">Vintage</label>
+              <input class="input" type="text" id="f-vintage" name="vintage" value="${escapeHtml(w.vintage)}" placeholder="2018" inputmode="numeric" maxlength="10">
+            </div>
           </div>
+
           <div class="field">
-            <label class="field-label" for="f-vintage">Vintage</label>
-            <input class="input" type="text" id="f-vintage" name="vintage" value="${escapeHtml(w.vintage)}" placeholder="2018" inputmode="numeric" maxlength="10">
+            <label class="field-label" for="f-producer">Producer</label>
+            <input class="input" type="text" id="f-producer" name="producer" value="${escapeHtml(w.producer)}" placeholder="Domaine de la Romanée-Conti" list="dl-producers" autocomplete="off">
           </div>
-        </div>
 
-        <div class="field-group-title">Provenance</div>
-
-        <div class="field">
-          <label class="field-label" for="f-producer">Producer</label>
-          <input class="input" type="text" id="f-producer" name="producer" value="${escapeHtml(w.producer)}" placeholder="Domaine de la Romanée-Conti" list="dl-producers" autocomplete="off">
-        </div>
-
-        <div class="field">
-          <label class="field-label" for="f-region">Region</label>
-          <input class="input" type="text" id="f-region" name="region" value="${escapeHtml(w.region)}" placeholder="Barolo, Piedmont" list="dl-regions" autocomplete="off">
-        </div>
-
-        <div class="field">
-          <label class="field-label" for="f-grape">Grape variety</label>
-          <input class="input" type="text" id="f-grape" name="grape" value="${escapeHtml(w.grape)}" placeholder="Nebbiolo, or blend" list="dl-grapes" autocomplete="off">
-          <span class="field-hint">One variety or a blend — "Cabernet Sauvignon, Merlot".</span>
-        </div>
-
-        ${buildDatalists()}
-
-        <div class="field">
-          <label class="field-label" for="f-event">Event</label>
-          <input class="input" type="text" id="f-event" name="event" value="${escapeHtml(w.event)}" placeholder="WSET class, dinner at Noma, home tasting…" list="dl-events" autocomplete="off">
-        </div>
-
-        <div class="field">
-          <label class="field-label" for="f-date">Tasted on</label>
-          <input class="input" type="date" id="f-date" name="date" value="${escapeHtml(w.date)}">
-        </div>
-
-        <div class="field-row-2">
           <div class="field">
-            <label class="field-label" for="f-colour">Colour</label>
+            <label class="field-label" for="f-region">Region</label>
+            <input class="input" type="text" id="f-region" name="region" value="${escapeHtml(w.region)}" placeholder="Barolo, Piedmont" list="dl-regions" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-grape">Grape variety</label>
+            <input class="input" type="text" id="f-grape" name="grape" value="${escapeHtml(w.grape)}" placeholder="Nebbiolo, or blend" list="dl-grapes" autocomplete="off">
+          </div>
+
+          ${buildDatalists()}
+
+          <div class="field">
+            <label class="field-label" for="f-event">Event</label>
+            <input class="input" type="text" id="f-event" name="event" value="${escapeHtml(w.event)}" placeholder="WSET class, dinner at Noma, home tasting…" list="dl-events" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-date">Tasted on</label>
+            <input class="input" type="date" id="f-date" name="date" value="${escapeHtml(w.date)}">
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-colour">Wine type</label>
             <select class="select" id="f-colour" name="colour">${selectOptions(COLOURS, w.colour)}</select>
           </div>
+        </div>
+
+        <!-- ===== Appearance ===== -->
+        <div class="wset-section">
+          <div class="wset-section-label">Appearance</div>
+
+          <div class="field-row-3">
+            <div class="field">
+              <label class="field-label" for="f-wsetClarity">Clarity</label>
+              ${wsetSelect('wsetClarity', WSET.clarity, w.wsetClarity)}
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-wsetAppearanceIntensity">Intensity</label>
+              ${wsetSelect('wsetAppearanceIntensity', WSET.intensityAppearance, w.wsetAppearanceIntensity)}
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-wsetColour">Colour</label>
+              ${wsetSelect('wsetColour', colourOpts, w.wsetColour)}
+            </div>
+          </div>
+
           <div class="field">
-            <label class="field-label" for="f-style">Style</label>
-            <select class="select" id="f-style" name="style">${selectOptions(STYLES, w.style)}</select>
+            <label class="field-label" for="f-wsetAppearanceOther">Other observations</label>
+            <textarea class="textarea short" id="f-wsetAppearanceOther" name="wsetAppearanceOther" placeholder="e.g. legs/tears, deposit, pétillance, bubbles">${escapeHtml(w.wsetAppearanceOther || '')}</textarea>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-appearance">Free notes</label>
+            <textarea class="textarea short" id="f-appearance" name="appearance" placeholder="Anything else about the appearance…">${escapeHtml(w.appearance)}</textarea>
           </div>
         </div>
 
-        <div class="field-rating-row">
-          <div class="field">
-            <label class="field-label">Rating</label>
-            <div class="rating-input" id="ratingInput">${ratingBtns}</div>
-          </div>
-          <div class="field">
-            <label class="field-label" for="f-rp">RP Score</label>
-            <input class="input rp" type="number" id="f-rp" name="rpScore" value="${rp}" placeholder="95" min="50" max="100" inputmode="numeric">
-          </div>
-        </div>
+        <!-- ===== Nose ===== -->
+        <div class="wset-section">
+          <div class="wset-section-label">Nose</div>
 
-        <div class="field">
-          <label class="field-label" for="f-appearance">Appearance</label>
-          <textarea class="textarea" id="f-appearance" name="appearance" placeholder="Colour, clarity, viscosity, rim…">${escapeHtml(w.appearance)}</textarea>
-          <span class="field-hint">What the eye sees in the glass.</span>
-        </div>
-
-        <div class="field">
-          <label class="field-label" for="f-nose">Nose</label>
-          <textarea class="textarea" id="f-nose" name="nose" placeholder="Aromas — fruit, floral, earth, oak, development…">${escapeHtml(w.nose)}</textarea>
-          <span class="field-hint">First impressions, then secondary and tertiary notes.</span>
-        </div>
-
-        <div class="field-group-title">Structure</div>
-        <div class="field-row-3">
-          <div class="field">
-            <label class="field-label" for="f-acid">Acid</label>
-            <select class="select compact" id="f-acid" name="acid">${scaleOptions(w.acid)}</select>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label" for="f-wsetNoseCondition">Condition</label>
+              ${wsetSelect('wsetNoseCondition', WSET.condition, w.wsetNoseCondition)}
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-wsetNoseIntensity">Intensity</label>
+              ${wsetSelect('wsetNoseIntensity', WSET.scale5, w.wsetNoseIntensity)}
+            </div>
           </div>
+
           <div class="field">
-            <label class="field-label" for="f-tannin">Tannin</label>
-            <select class="select compact" id="f-tannin" name="tannin">${scaleOptions(w.tannin)}</select>
+            <label class="field-label">Aroma characteristics</label>
+            <div class="field-hint" style="margin-bottom:8px;">Tap to mark the descriptors you detect. Tap again to remove.</div>
+            ${wsetLexiconBlock('wsetNoseAromas', w.wsetNoseAromas || [])}
           </div>
+
           <div class="field">
-            <label class="field-label" for="f-body">Body</label>
-            <select class="select compact" id="f-body" name="body">${scaleOptions(w.body)}</select>
+            <label class="field-label" for="f-wsetDevelopment">Development</label>
+            ${wsetSelect('wsetDevelopment', WSET.development, w.wsetDevelopment)}
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-nose">Free notes</label>
+            <textarea class="textarea short" id="f-nose" name="nose" placeholder="Anything else about the nose…">${escapeHtml(w.nose)}</textarea>
           </div>
         </div>
 
-        <div class="field">
-          <label class="field-label" for="f-palate">Palate</label>
-          <textarea class="textarea tall" id="f-palate" name="palate" placeholder="Flavours, texture, finish length…">${escapeHtml(w.palate)}</textarea>
-          <span class="field-hint">Flavour profile and how the wine evolves on the palate.</span>
+        <!-- ===== Palate ===== -->
+        <div class="wset-section">
+          <div class="wset-section-label">Palate</div>
+
+          <div class="field">
+            <label class="field-label" for="f-wsetSweetness">Sweetness</label>
+            ${wsetSelect('wsetSweetness', WSET.sweetness, w.wsetSweetness)}
+          </div>
+
+          <div class="field-row-3">
+            <div class="field">
+              <label class="field-label" for="f-acid">Acidity</label>
+              ${wsetSelect('acid', WSET.scaleStructure, w.acid)}
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-tannin">Tannin</label>
+              ${wsetSelect('tannin', WSET.scaleStructure, w.tannin)}
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-wsetAlcohol">Alcohol</label>
+              ${wsetSelect('wsetAlcohol', WSET.alcohol, w.wsetAlcohol)}
+            </div>
+          </div>
+
+          <div class="field-row${isSparkling ? '' : '-2'}">
+            <div class="field">
+              <label class="field-label" for="f-body">Body</label>
+              ${wsetSelect('body', WSET.scaleBody, w.body)}
+            </div>
+            ${isSparkling ? `
+              <div class="field">
+                <label class="field-label" for="f-wsetMousse">Mousse</label>
+                ${wsetSelect('wsetMousse', WSET.mousse, w.wsetMousse)}
+              </div>
+            ` : ''}
+            <div class="field">
+              <label class="field-label" for="f-wsetFlavourIntensity">Flavour intensity</label>
+              ${wsetSelect('wsetFlavourIntensity', WSET.scale5, w.wsetFlavourIntensity)}
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Flavour characteristics</label>
+            <div class="field-hint" style="margin-bottom:8px;">Same descriptors as nose — mark what you detect on the palate.</div>
+            ${wsetLexiconBlock('wsetPalateAromas', w.wsetPalateAromas || [])}
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-wsetFinish">Finish</label>
+            ${wsetSelect('wsetFinish', WSET.scale5, w.wsetFinish)}
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-palate">Free notes</label>
+            <textarea class="textarea short" id="f-palate" name="palate" placeholder="Anything else about the palate…">${escapeHtml(w.palate)}</textarea>
+          </div>
         </div>
 
-        <div class="field">
-          <label class="field-label" for="f-summary">Summary</label>
-          <textarea class="textarea" id="f-summary" name="summary" placeholder="Overall impression, quality, food pairing, drinking window…">${escapeHtml(w.summary)}</textarea>
+        <!-- ===== Conclusions ===== -->
+        <div class="wset-section">
+          <div class="wset-section-label">Conclusions</div>
+
+          <div class="field">
+            <label class="field-label" for="f-wsetQuality">Quality level</label>
+            ${wsetSelect('wsetQuality', WSET.quality, w.wsetQuality)}
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-wsetReadiness">Level of readiness for drinking</label>
+            ${wsetSelect('wsetReadiness', WSET.readiness, w.wsetReadiness)}
+          </div>
+
+          <div class="field-rating-row">
+            <div class="field">
+              <label class="field-label">Rating</label>
+              <div class="rating-input" id="ratingInput">${ratingBtns}</div>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-rp">RP Score</label>
+              <input class="input rp" type="number" id="f-rp" name="rpScore" value="${rp}" placeholder="95" min="50" max="100" inputmode="numeric">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-summary">Summary</label>
+            <textarea class="textarea" id="f-summary" name="summary" placeholder="Overall impression, food pairing, drinking window…">${escapeHtml(w.summary)}</textarea>
+          </div>
         </div>
 
         <div class="form-actions">
@@ -8227,7 +8839,55 @@ function attachEventHandlers() {
     });
     form.addEventListener('change', (e) => {
       if (!state.formDraft || !e.target.name) return;
+      // When the wine type changes, the colour-shade options need to refresh
+      if (e.target.name === 'colour') {
+        state.formDraft.colour = e.target.value;
+        // Reset colour shade since options have changed
+        state.formDraft.wsetColour = '';
+        render();
+        return;
+      }
       state.formDraft[e.target.name] = e.target.value;
+    });
+
+    // Lexicon tag clicks (Wine-Lexicon aroma/flavour picker)
+    form.addEventListener('click', (e) => {
+      const tag = e.target.closest('.lex-tag[data-lex-field]');
+      if (!tag) return;
+      e.preventDefault();
+      const field = tag.getAttribute('data-lex-field');
+      const tagId = tag.getAttribute('data-lex-tag');
+      if (!state.formDraft) return;
+      if (!Array.isArray(state.formDraft[field])) state.formDraft[field] = [];
+      const idx = state.formDraft[field].indexOf(tagId);
+      if (idx >= 0) {
+        state.formDraft[field].splice(idx, 1);
+        tag.classList.remove('on');
+      } else {
+        state.formDraft[field].push(tagId);
+        tag.classList.add('on');
+      }
+      // Update the hidden input
+      const hidden = document.getElementById('f-' + field);
+      if (hidden) hidden.value = JSON.stringify(state.formDraft[field]);
+      // Update cluster count badge (the parent cluster summary)
+      const cluster = tag.closest('.lex-cluster');
+      if (cluster) {
+        const onTags = cluster.querySelectorAll('.lex-tag.on');
+        let countEl = cluster.querySelector('.lex-cluster-count');
+        if (onTags.length > 0) {
+          cluster.classList.add('has-selected');
+          if (!countEl) {
+            countEl = document.createElement('span');
+            countEl.className = 'lex-cluster-count';
+            cluster.querySelector('.lex-cluster-summary').appendChild(countEl);
+          }
+          countEl.textContent = onTags.length;
+        } else {
+          cluster.classList.remove('has-selected');
+          if (countEl) countEl.remove();
+        }
+      }
     });
 
     form.addEventListener('submit', async (e) => {
@@ -8239,6 +8899,15 @@ function attachEventHandlers() {
         rp = parseInt(rpRaw, 10);
         if (isNaN(rp) || rp < 50 || rp > 100) rp = 0;
       }
+      // Parse hidden JSON-serialised aroma tag selections
+      function parseTags(name) {
+        const raw = (fd.get(name) || '[]').toString();
+        try {
+          const arr = JSON.parse(raw);
+          return Array.isArray(arr) ? arr : [];
+        } catch (e) { return []; }
+      }
+
       const data = {
         ...blankWine(),
         ...state.formDraft,
@@ -8250,14 +8919,37 @@ function attachEventHandlers() {
         region: (fd.get('region') || '').toString().trim(),
         grape: (fd.get('grape') || '').toString().trim(),
         colour: (fd.get('colour') || '').toString().trim(),
-        style: (fd.get('style') || '').toString().trim(),
+        rpScore: rp,
+
+        // WSET Appearance
+        wsetClarity: (fd.get('wsetClarity') || '').toString().trim(),
+        wsetAppearanceIntensity: (fd.get('wsetAppearanceIntensity') || '').toString().trim(),
+        wsetColour: (fd.get('wsetColour') || '').toString().trim(),
+        wsetAppearanceOther: (fd.get('wsetAppearanceOther') || '').toString().trim(),
+        appearance: (fd.get('appearance') || '').toString().trim(),
+
+        // WSET Nose
+        wsetNoseCondition: (fd.get('wsetNoseCondition') || '').toString().trim(),
+        wsetNoseIntensity: (fd.get('wsetNoseIntensity') || '').toString().trim(),
+        wsetNoseAromas: parseTags('wsetNoseAromas'),
+        wsetDevelopment: (fd.get('wsetDevelopment') || '').toString().trim(),
+        nose: (fd.get('nose') || '').toString().trim(),
+
+        // WSET Palate
+        wsetSweetness: (fd.get('wsetSweetness') || '').toString().trim(),
         acid: (fd.get('acid') || '').toString().trim(),
         tannin: (fd.get('tannin') || '').toString().trim(),
+        wsetAlcohol: (fd.get('wsetAlcohol') || '').toString().trim(),
         body: (fd.get('body') || '').toString().trim(),
-        rpScore: rp,
-        appearance: (fd.get('appearance') || '').toString().trim(),
-        nose: (fd.get('nose') || '').toString().trim(),
+        wsetMousse: (fd.get('wsetMousse') || '').toString().trim(),
+        wsetFlavourIntensity: (fd.get('wsetFlavourIntensity') || '').toString().trim(),
+        wsetPalateAromas: parseTags('wsetPalateAromas'),
+        wsetFinish: (fd.get('wsetFinish') || '').toString().trim(),
         palate: (fd.get('palate') || '').toString().trim(),
+
+        // Conclusions
+        wsetQuality: (fd.get('wsetQuality') || '').toString().trim(),
+        wsetReadiness: (fd.get('wsetReadiness') || '').toString().trim(),
         summary: (fd.get('summary') || '').toString().trim(),
       };
 

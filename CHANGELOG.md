@@ -1,9 +1,17 @@
-# Changelog
+[CHANGELOG.md](https://github.com/user-attachments/files/27902350/CHANGELOG.md)# Changelog
 
 All notable changes to Mikael's Vin are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.2.0] — 2026-04-21
+
+### Added
+- New **Champagne houses** reference section on the home page (gold-striped card between Travel and Grape Encyclopedia)
+- Detailed entries for 17 grandes maisons: Salon, Delamotte, Diébolt-Vallois, Lallier, Besserat de Bellefon, Billecart-Salmon, Deutz, Philipponnat, De Venoge, Moët & Chandon (with Dom Pérignon), Lanson, Palmer & Co, Pol Roger, Gosset, Veuve Clicquot, Piper-Heidsieck (Rare), Pommery
+- Each entry includes founding year, village, house style, full historical background, and walkthrough of prestige and vintage cuvées
+- Dedicated view per house with sections for history, cuvées, recent vintages, and notes
 
 ## [1.1.0] — 2026-04-21
 

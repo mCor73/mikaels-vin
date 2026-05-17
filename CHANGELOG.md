@@ -1,9 +1,22 @@
-[CHANGELOG.md](https://github.com/user-attachments/files/27902350/CHANGELOG.md)# Changelog
+# Changelog
 
 All notable changes to Mikael's Vin are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.3.0] — 2026-04-21
+
+### Removed
+- **Wine quiz feature** removed entirely, along with its Supabase backend integration
+- Quiz home button, quiz views (hub, editor, join, waiting, play, results), all quiz state, storage keys, and event handlers
+- Supabase JS SDK script and associated constants
+- Quiz import/export from XML backups
+- ~81 KB of code and CSS removed
+
+### Notes
+- The Supabase project at `vwhpmnocxmaemrcdgrmb.supabase.co` is no longer used by the app. It can be deleted from supabase.com if no longer wanted.
+- Tasting notes, cellar, tastings, travel, Champagne reference, grape encyclopedia, QR sharing, Dropbox sync, and all other features are unchanged.
 
 ## [1.2.0] — 2026-04-21
 
